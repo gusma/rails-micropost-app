@@ -1,11 +1,11 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: rails_micropost_app
+    databaseName: rails_micropost_app_production
+    user: rails_micropost_app
 
 services:
   - type: web
-    name: mysite
+    name: rails-micropost-app
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
