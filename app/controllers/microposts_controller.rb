@@ -8,6 +8,8 @@ class MicropostsController < ApplicationController
 
   # GET /microposts/1 or /microposts/1.json
   def show
+    @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   # GET /microposts/new
