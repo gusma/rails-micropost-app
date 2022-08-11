@@ -2,7 +2,6 @@
   <% if user.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
       <ul>
         <% user.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,17 +9,23 @@
       </ul>
     </div>
   <% end %>
-
+  <%= render 'shared/error_messages' %>
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
-
   <div>
     <%= form.label :email, style: "display: block" %>
     <%= form.text_field :email %>
   </div>
-
+  <div>
+    <%= form.password_field :password, class: 'form-control' %>
+    <%= form.label :password_confirmation, "Confirmation" %>
+  </div>
+  <div>
+    <%= form.password_field :password_confirmation, class: 'form-control' %>
+    <%= form.submit "Create my account", class: "btn btn-primary" %>
+  </div>
   <div>
     <%= form.submit %>
   </div>
