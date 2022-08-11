@@ -19,6 +19,7 @@ gem 'turbo-rails', '1.0.1'
 
 group :development, :test do
   gem 'debug',   '1.4.0', platforms: %i[mri mingw x64_mingw]
+  gem 'rubocop', '~> 1.34'
   gem 'sqlite3', '1.4.2'
 end
 
@@ -35,10 +36,6 @@ group :test do
   gem 'rails-controller-testing', '1.0.5'
   gem 'selenium-webdriver',       '4.1.0'
   gem 'webdrivers', '5.0.0'
-end
-
-group :production do
-  gem 'pg', '1.3.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem.
