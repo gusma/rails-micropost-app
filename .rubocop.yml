@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-performance
   - rubocop-rails
@@ -22,12 +24,12 @@ Metrics/ClassLength:
   Description: "Avoid classes longer than 100 lines of code."
   Max: 100
   Enabled: true
-  
+
 Metrics/BlockLength:
   Description: "Do not mess with block lengths (for now)"
   Max: 1000
   Exclude:
-  - "test/**/*"
+   - "test/**/*"
 
 Metrics/MethodLength:
   Max: 1000
@@ -169,7 +171,4 @@ Rails/Delegate:
 # Bundler Cops
 
 Bundler/OrderedGems:
-  Enabled: false
-
-Style/Documentation:
   Enabled: false
