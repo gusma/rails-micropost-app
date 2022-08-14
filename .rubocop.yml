@@ -29,7 +29,7 @@ Metrics/BlockLength:
   Description: "Do not mess with block lengths (for now)"
   Max: 1000
   Exclude:
-   - "test/**/*"
+    - "test/**/*"
 
 Metrics/MethodLength:
   Max: 1000
