@@ -22,7 +22,6 @@ gem "rubocop-rails"
 gem "rubocop-performance", require: false
 gem "rubocop-rspec", require: false
 
-
 group :development, :test do
   gem "debug",   "1.4.0", platforms: %i[mri mingw x64_mingw]
   gem "rubocop", "~> 1.34"
