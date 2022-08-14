@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SessionsHelper
   # Logs in the given user.
   def log_in(user)
@@ -22,7 +24,6 @@ module SessionsHelper
         @current_user = user
       end
     end
-
   end
 
   # Returns true if the user is logged in, false otherwise.
